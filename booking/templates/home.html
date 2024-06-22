@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h2>Latest Reservations</h2>
+    <ul>
+        {% for reservation in latest_reservations %}
+        <li>{{ reservation.date }} at {{ reservation.time }} by {{ reservation.user.username }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
